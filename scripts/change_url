@@ -1,0 +1,30 @@
+#!/bin/bash
+### App file generated with YoloGen, the Yunohost app generator, version .
+
+#=================================================
+# GENERIC STARTING
+#=================================================
+# IMPORT GENERIC HELPERS
+#=================================================
+
+source _common.sh
+source /usr/share/yunohost/helpers
+
+#=================================================
+# MODIFY URL IN NGINX CONF
+#=================================================
+ynh_script_progression --message="Updating NGINX web server configuration..."
+
+ynh_change_url_nginx_config
+
+#=================================================
+# SPECIFIC MODIFICATIONS
+#=================================================
+# ...
+#=================================================
+
+#=================================================
+# END OF SCRIPT
+#=================================================
+
+ynh_script_progression --message="Change of URL completed for $app" --last
